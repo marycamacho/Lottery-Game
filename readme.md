@@ -38,4 +38,7 @@ Inputs
 Prompt
 
 	var numbers = prompt("Enter your numbers");
+
+Art Attribution:
+<a href="http://www.freepik.com/free-vector/3d-sphere-object_850070.htm">Designed by Freepik</a>
 		
