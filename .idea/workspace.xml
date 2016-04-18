@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e84fdc39-e174-46a5-b04c-51b405ae1643" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/art/bg.psd" afterPath="$PROJECT_DIR$/art/bg.psd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/img/bg.png" afterPath="$PROJECT_DIR$/src/img/bg.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/style.css" afterPath="$PROJECT_DIR$/src/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/page.js" afterPath="$PROJECT_DIR$/src/js/page.js" />
     </list>
     <ignored path="Lottery-Game.iws" />
@@ -27,7 +23,7 @@
     <favorites_list name="Lottery-Game" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48868313">
+    <splitter split-orientation="horizontal" split-proportion="0.49635038">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
           <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
@@ -43,8 +39,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="258">
-                  <caret line="33" column="104" selection-start-line="33" selection-start-column="104" selection-end-line="33" selection-end-column="104" />
+                <state relative-caret-position="501">
+                  <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -73,8 +69,8 @@
           <file leaf-file-name="page.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/js/page.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="175">
-                  <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+                <state relative-caret-position="725">
+                  <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -99,8 +95,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1225">
-                  <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -300,12 +296,12 @@
       <updated>1460768778654</updated>
       <workItem from="1460768780111" duration="1228000" />
       <workItem from="1460849714644" duration="11501000" />
-      <workItem from="1460899516049" duration="35911000" />
+      <workItem from="1460899516049" duration="41181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48640000" />
+    <option name="totallyTimeSpent" value="53910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2060" y="69" width="2071" height="1174" extended-state="6" />
@@ -421,14 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="33" column="104" selection-start-line="33" selection-start-column="104" selection-end-line="33" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
@@ -437,10 +425,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="725">
+          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
           <folding />
         </state>
       </provider>

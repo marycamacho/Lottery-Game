@@ -6,12 +6,14 @@ $(function(){
     var pickedNumbers = [];
     var randomNumbers = [];
     var balanceAmt = 10;
-    var recordScore =10;
+    var recordScore = 10;
+    //var data = getData();
+
 
     //display beginning balance and record winnings and handlePlayButton
     $('.balance').text(balanceAmt);
     $('.currentWinnings').text(0);
-    $('.recordScore').text(balanceAmt);
+    $('.recordScore').text(recordScore);
     handlePlayButton();
 
     //everything that happens when the user clicks on one of the numbers in the boxes
@@ -116,7 +118,9 @@ $(function(){
             }
 
             if (balanceAmt > recordScore) {
-                $('.recordScore').text(balanceAmt);
+                recordScore = balanceAmt;
+                $('.recordScore').text(recordScore);
+                //saveData(data);
             }
 
         }, 2500);
@@ -141,6 +145,28 @@ $(function(){
             }
         }
     });
+    // save Record Score to local storage and get Record Score if it is already in local storage
+    /*function getData(){
+        var existingRecordScore = localStorage.getItem('recordScore');
+
+        if (existingRecordScore) {
+            var data = JSON.parse(existingRecordScore);
+            return data;
+        } else {
+            return data = balanceAmt;
+        }
+    }
+
+    function saveData(data){
+        if (window.localStorage){
+            var dataString = JSON.stringify(data);
+            console.log(dataString);
+            localStorage.setItem('recordScore',dataString);
+        } else {
+            alert('Local Storage not Supported');
+        }
+    }*/
+
 });
 
 
