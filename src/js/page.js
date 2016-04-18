@@ -62,7 +62,7 @@ $(function(){
             $('.numPicks .pickedIndex'+index).text(value);
         });
     }
-    // put into a function that can be called from many places
+    // function that sets state of play button
     function handlePlayButton () {
         var allPlay$ = $(".play");
         if (balanceAmt >= 2 && pickedNumbers.length == 4) {
@@ -84,20 +84,22 @@ $(function(){
         balanceAmt = balanceAmt - 2;
         $('.balance').text(balanceAmt);
 
-        // add spin class to balls for 3 seconds, then remove
-        var spinBall$ = $(".numRandoms .ball");
-        spinBall$.addClass('spin');
-        setInterval(function(){
-            spinBall$.removeClass("spin");
+        // function to add spin class to balls
+        function startSpin () {
+            var spinBall$ = $(".numRandoms .ball");
+            spinBall$.addClass('spin');
+        }
 
-        }, 3000);
+        // function to remove spin class
+        function stopSpin () {
+            var spinBall$ = $(".numRandoms .ball");
+            spinBall$.removeClass('spin');
+        }
 
         // randomly calculate a number min and max inclusive
         function randomGenerator (min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
-
-    //after a 3+ second delay, for each .numRandoms and .ball in the dom, run the Random# function and paint the result in the div and save it to the array.
 
         //painting numbers into balls for random selected numbers
         function paintRandomNums () {
@@ -111,13 +113,19 @@ $(function(){
         var pickRandom$ = $(".numRandoms .ball");
         randomNumbers = [];
 
+
+        // upon click, pick the random numbers by runing the random generator and push values to the array.
+        pickRandom$.each(function (index, el) {
+            var pickedRandomNumber = randomGenerator(1,10);
+            randomNumbers.push(pickedRandomNumber);
+        });
         //after a timeout period, run random number generator and populate the array, then paint numbers into winning display, then calculate the winnings and update the balance, the winnings and the record where appropriate.
+
+
+        // run startSpin function
+        startSpin();
         setTimeout(function(){
 
-            pickRandom$.each(function (index, el) {
-                var pickedRandomNumber = randomGenerator(1,10);
-                randomNumbers.push(pickedRandomNumber);
-            });
             paintRandomNums();
 
             var winnings = calculateWinnings();
@@ -137,6 +145,9 @@ $(function(){
                 // update recordScore to localStorage
                 localStorage.setItem("recordScoreData", recordScore);
             }
+
+            //stop spin function
+            stopSpin();
         }, 2500);
 
 
