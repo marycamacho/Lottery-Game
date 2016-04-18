@@ -6,14 +6,26 @@ $(function(){
     var pickedNumbers = [];
     var randomNumbers = [];
     var balanceAmt = 10;
-    var recordScore = 10;
-    //var data = getData();
-
+    var recordScore = 0;
 
     //display beginning balance and record winnings and handlePlayButton
     $('.balance').text(balanceAmt);
     $('.currentWinnings').text(0);
-    $('.recordScore').text(recordScore);
+
+    // function that checks localStorage and if there is a value, tests if it is greater than the current balanceAmt, and paint the higher value to page as record score.
+    function highScore () {
+        var storedRecordScore = parseFloat(localStorage.getItem("recordScoreData"));
+        if (storedRecordScore > recordScore) {
+            recordScore = storedRecordScore;
+        }
+        if (recordScore < balanceAmt) {
+            recordScore = balanceAmt;
+        }
+        $('.recordScore').text(recordScore);
+    }
+
+    //run functions for setting state of recordScore and Play Button
+    highScore();
     handlePlayButton();
 
     //everything that happens when the user clicks on one of the numbers in the boxes
@@ -39,7 +51,7 @@ $(function(){
         }
         paintPickedNums();
         handlePlayButton();
-        console.log(pickedNumbers);
+
         //saveData(data);
     });
 
@@ -95,9 +107,11 @@ $(function(){
             });
         }
 
+        //create jquery selector var for displaying random winning numbers and reset the random number array
         var pickRandom$ = $(".numRandoms .ball");
         randomNumbers = [];
 
+        //after a timeout period, run random number generator and populate the array, then paint numbers into winning display, then calculate the winnings and update the balance, the winnings and the record where appropriate.
         setTimeout(function(){
 
             pickRandom$.each(function (index, el) {
@@ -108,7 +122,7 @@ $(function(){
 
             var winnings = calculateWinnings();
             $('.currentWinnings').text(winnings);
-            console.log(winnings);
+
 
             // calculate and display new balance
 
@@ -120,12 +134,14 @@ $(function(){
             if (balanceAmt > recordScore) {
                 recordScore = balanceAmt;
                 $('.recordScore').text(recordScore);
-                //saveData(data);
+                // update recordScore to localStorage
+                localStorage.setItem("recordScoreData", recordScore);
             }
-
         }, 2500);
 
-        // compare arrays of numbers (picked & random):  for each picked number, analyze if it is in the random array. For every one that is a yes, calculate and sum winnings.
+
+
+        // function that compare arrays of numbers (picked & random):  for each picked number, analyze if it is in the random array. For every one that is a yes, calculate and sum winnings.
 
         function calculateWinnings (){
             var countOfMatches = 0;
@@ -134,7 +150,6 @@ $(function(){
                     countOfMatches++;
                 }
             }
-            console.log(countOfMatches);
 
             //calculate winnings for ticket - if 0 wins, return 0 winnings
             //decided to give more
@@ -145,27 +160,7 @@ $(function(){
             }
         }
     });
-    // save Record Score to local storage and get Record Score if it is already in local storage
-    /*function getData(){
-        var existingRecordScore = localStorage.getItem('recordScore');
 
-        if (existingRecordScore) {
-            var data = JSON.parse(existingRecordScore);
-            return data;
-        } else {
-            return data = balanceAmt;
-        }
-    }
-
-    function saveData(data){
-        if (window.localStorage){
-            var dataString = JSON.stringify(data);
-            console.log(dataString);
-            localStorage.setItem('recordScore',dataString);
-        } else {
-            alert('Local Storage not Supported');
-        }
-    }*/
 
 });
 
