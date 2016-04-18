@@ -1,19 +1,13 @@
 body {
     font-family: 'Raleway', sans-serif;
+    background: url('../img/bg.png') center !important;
+    background-size: cover !important;
+    color: white;
 }
-
-.square {
-    height: 100px;
-    width: 100px;
-    border: thin solid #2f4f4f;
-    cursor: pointer;
-}
-
 header {
-    background: #353859;
+    background: #350d5f;
     height: 70px;
 }
-
 header h1 {
     padding-top: 20px;
     font-family: 'Expletus Sans', cursive;
@@ -21,45 +15,119 @@ header h1 {
     margin-top: 0;
     font-size: 250%;
 }
-
-.headerBtns {
-    margin-top: -30px;
-    padding-right: 25px;
+div h2 {
+    margin: 40px 0 20px 0;
 }
-
-.fa-refresh {
-    color: #f5f5f5;
-    font-size: 120%;
-    float: right;
+.user-icon {
+    width: 220px;
+    margin: 20px 60px;
 }
-
-footer {
-    background: #353859;
-    height: 60px;
+.user-data-bg {
+    background: url("../img/gr-trans-scroll.png")no-repeat;
+    background-size: contain;
+    height: 220px;
+    width: 360px;
 }
+.user-data {
 
-.prettyBG {
-    background: url('../img/colorbg.png')no-repeat center!important;
-    background-size: cover!important;
-    height: 90%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5em;
+    padding: 7%
 }
-
-.whiteBG {
+.num-box-green{
+    background-color:#8FA352;
+}
+.num-box-yellow {
+    background-color:#FEA00E;
+}
+.num-box{
+    width:40px;
+    height:40px;
+    margin: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 1.2em;
+    padding-top: 1%;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    color: white;
+}
+h3 {
+    color: white;
+    font-size: 2.143em;
+}
+.playButton div {
+    background: url('../img/play-now-button.png') no-repeat;
+    background-size: auto;
+    height:100px;
+}
+.playButtonGrey div {
+    background: url('../img/play-now-button-gray.png') no-repeat;
+    background-size: auto;
+    height:100px;
+    cursor: default;
+}
+.ball {
+    float: left;
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    font-size: 4em;
+    color: black;
+    padding-top: 3.5%;
+    text-align: center;
+    vertical-align: middle;
     background-color: white;
+    border-radius: 50%;
+    box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
+    background-image: -webkit-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+    background-image: -o-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+}
+.spin {
+        -webkit-animation: spin 2s linear infinite;
+        -moz-animation: spin 2s linear infinite;
+        -o-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }}
+@-moz-keyframes spin {
+    from {
+        -moz-transform:rotate(0deg);
+    }
+    to {
+        -moz-transform:rotate(360deg);
+    }}
+@-o-keyframes spin {
+    from {
+        -o-transform:rotate(0deg);
+    }
+    to {
+        -o-transform:rotate(360deg);
+    }}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }}
+
+.score-details {
+   color: white;
 }
 
-.well{
-    padding:20px 30px;
-}
-
-.top_20 {
-    margin-top: 20px;
-}
-
-.double {
-    background: url('../img/double.png') no-repeat center;
-}
-
-.single {
-    background: url('../img/single.png') no-repeat center;
+.score-details h4 {
+    font-size: 2em;
 }

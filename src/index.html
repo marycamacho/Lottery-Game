@@ -8,21 +8,70 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Expletus+Sans:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Pic-n-Play</title>
+    <title>Pic-n-Play - The $2 Lottery Game</title>
 </head>
 <body>
 <header>
-    <h1 class="text-center">Pic-n-Play</h1>
+    <h1 class="text-center">Pic-n-Play - The $2 Lottery Game</h1>
 
 </header>
 <div class="prettyBG">
 <div class="container">
+    <div class="row">
 
+        <div class="col-md-8">
+
+            <div class="row"><h2>Pick 4 Numbers for Your Ticket</h2>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="1">1</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="2">2</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="3">3</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="4">4</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="5">5</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="6">6</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="7">7</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="8">8</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="9">9</div></a>
+            <a class="num-select" href="#"><div class="num-box num-box-green" data-num="10">10</div></a>
+            </div>
+            <hr>
+            <div class="row numPicks">
+                <h3>Selected Numbers for your Ticket:</h3>
+                <div class="ball pickedIndex0"></div>
+                <div class="ball pickedIndex1"></div>
+                <div class="ball pickedIndex2"></div>
+                <div class="ball pickedIndex3"></div>
+            </div>
+            <hr>
+            <div class="row numRandoms">
+                <h3>Winning Numbers:</h3>
+                <div class="ball pickedIndex0" ></div>
+                <div class="ball pickedIndex1" ></div>
+                <div class="ball pickedIndex2" ></div>
+                <div class="ball pickedIndex3" ></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img class="user-icon" src="img/puppy-character.png">
+            <div class="user-data-bg">
+                <div class="user-data">Welcome</br>Balance: $<span  class="balance"></span> </div>
+            </div>
+            <a href="#" class="play">
+                <div></div>
+            </a>
+            <div class="score-details">
+                <h4>Current Winnings: $<span class="currentWinnings"></span></h4>
+                <h4>Record Score: $<span class="recordScore"></span></h4>
+            </div>
+        </div>
+    </div>
+    <!--<div class="panel panel-default well whiteBG top_20">
+        <p>
+            This is some sample text to figure out why the footer is showing up top.
+        </p>
+    </div>-->
 </div>
 </div>
-<footer>
 
-</footer>
 <!-- SCRIPTS -->
 <script src="js/jquery-2.2.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
