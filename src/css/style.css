@@ -19,8 +19,9 @@ div h2 {
     margin: 40px 0 20px 0;
 }
 .user-icon {
-    width: 220px;
-    margin: 20px 60px;
+    margin: 10% 20%;
+    max-width: 220px;
+    text-align: center;
 }
 .user-data-bg {
     background: url("../img/gr-trans-scroll.png")no-repeat;
@@ -29,7 +30,8 @@ div h2 {
     width: 360px;
 }
 .user-data {
-
+    width: 100%;
+    text-align: center;
     text-align: center;
     vertical-align: middle;
     font-size: 1.5em;
@@ -61,14 +63,17 @@ h3 {
 }
 .playButton div {
     background: url('../img/play-now-button.png') no-repeat;
-    background-size: auto;
-    height:100px;
+    background-size: contain;
+    min-height: 100px;
+    min-width: 360px;
 }
 .playButtonGrey div {
-    background: url('../img/play-now-button-gray.png') no-repeat;
-    background-size: auto;
-    height:100px;
+    background: url('../img/play-now-button-gray.png') no-repeat center center;
+    background-size: contain;
+    min-height: 100px;
+    min-width: 360px;
     cursor: default;
+
 }
 .ball {
     float: left;
@@ -130,4 +135,21 @@ h3 {
 
 .score-details h4 {
     font-size: 2em;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .ball {
+        width: 130px;
+        height: 130px;
+        font-size: 3.5em;
+        padding-top: 3.5%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .row .col-md4 > .pull-right {
+        float: none !important;
+    }
 }
